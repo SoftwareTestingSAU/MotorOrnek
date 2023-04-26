@@ -1,13 +1,13 @@
 package pkt;
 
-import java.util.UUID;
+import com.github.javafaker.Faker;
 
 public class Motor {
 	private String motorNo;
 	private boolean calisiyor;
 	
 	public Motor() {
-		this.motorNo = UUID.randomUUID().toString();
+		this.motorNo = new Faker().idNumber().valid();
 		calisiyor = false;
 	}
 	public Motor(String motorNo) {
